@@ -1,8 +1,11 @@
 {
   imports = [
     ./hyprland
-    ./zsh
+    ./stylix
     ./env.nix
     ./git.nix
+    ./kitty.nix
+    ./fzf.nix
+    # ./swww.nix
   ];
 }

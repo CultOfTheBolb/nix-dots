@@ -1,4 +1,4 @@
-{ homeStateVersion, user, ... }: {
+{ user, ... }: {
   imports = [
     ./home-packages.nix
     ./modules
@@ -8,7 +8,7 @@
   home = {
     username = user;
     homeDirectory = "/home/${user}";
-    stateVersion = homeStateVersion;
+    stateVersion = "24.05";
   };
 
   programs.home-manager.enable = true;

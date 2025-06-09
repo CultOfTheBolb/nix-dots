@@ -1,12 +1,13 @@
 {
   imports = [
+    ./stylix
     ./audio.nix
     ./bluetooth.nix
-    ./boot.nix
     # ./env.nix
     ./kernel.nix
     ./networking.nix
     ./nix.nix
+    ./boot.nix
     ./timezone.nix
     ./user.nix
     ./keyboard.nix
