@@ -1,6 +1,7 @@
 {
   wayland.windowManager.hyprland.settings = {
     bind = [
+      "$mainMod, Return, exec, $term"
       "$mainMod, Q, killactive"
       "$mainMod CTRL, H, resizeactive,-50 0"
       "$mainMod CTRL, L, resizeactive,50 0"

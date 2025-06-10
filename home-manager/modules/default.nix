@@ -6,6 +6,8 @@
     ./git.nix
     ./kitty.nix
     ./fzf.nix
+    ./zsh.nix
+    ./swayimg.nix
     # ./swww.nix
   ];
 }

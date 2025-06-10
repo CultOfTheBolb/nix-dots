@@ -11,6 +11,7 @@
     # Command line utils
     git
     swww
+    bat
 
     # Apps
     xfce.thunar

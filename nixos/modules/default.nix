@@ -3,7 +3,7 @@
     ./stylix
     ./audio.nix
     ./bluetooth.nix
-    # ./env.nix
+    ./env.nix
     ./kernel.nix
     ./networking.nix
     ./nix.nix
