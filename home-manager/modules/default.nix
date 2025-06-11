@@ -8,6 +8,8 @@
     ./fzf.nix
     ./zsh.nix
     ./swayimg.nix
-    # ./swww.nix
+    ./nh.nix
+    ./swww.nix
+    ./bat.nix
   ];
 }

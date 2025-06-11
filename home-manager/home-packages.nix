@@ -10,8 +10,7 @@
 
     # Command line utils
     git
-    swww
-    bat
+    nix-output-monitor
 
     # Apps
     xfce.thunar

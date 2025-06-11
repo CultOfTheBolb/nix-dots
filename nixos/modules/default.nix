@@ -3,7 +3,6 @@
     ./stylix
     ./audio.nix
     ./bluetooth.nix
-    ./env.nix
     ./kernel.nix
     ./networking.nix
     ./nix.nix
@@ -13,6 +12,6 @@
     ./keyboard.nix
     ./zram.nix
     ./hyprland.nix
-    # ./nh.nix
+    ./update.nix
   ];
 }

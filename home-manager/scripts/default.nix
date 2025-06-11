@@ -1,6 +1,6 @@
 {
   imports = [
     ./nv.nix
-    ./nix-build.nix
+    ./os.nix
   ];
 }
