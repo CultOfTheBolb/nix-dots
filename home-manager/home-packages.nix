@@ -11,9 +11,14 @@
     # Command line utils
     git
     nix-output-monitor
+    libnotify
 
     # Apps
     xfce.thunar
     kdePackages.dolphin
+    firefox
+
+    # Utils
+    networkmanagerapplet
   ];
 }

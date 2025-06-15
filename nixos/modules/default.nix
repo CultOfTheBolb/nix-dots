@@ -1,6 +1,6 @@
 {
   imports = [
-    ./stylix
+    ./stylix.nix
     ./audio.nix
     ./bluetooth.nix
     ./kernel.nix
@@ -13,5 +13,6 @@
     ./zram.nix
     ./hyprland.nix
     ./update.nix
+    ./greetd.nix
   ];
 }

@@ -13,6 +13,13 @@
       url = "github:danth/stylix/";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    hyprland.url = "github:hyprwm/Hyprland";
+
+    hyprland-plugins = {
+      url = "github:hyprwm/hyprland-plugins";
+      inputs.hyprland.follows = "hyprland";
+    };
   };
 
   outputs = { nixpkgs, home-manager, ... } @ inputs:
@@ -39,6 +46,9 @@
       modules = [
         ./home-manager/home.nix
 	inputs.stylix.homeModules.stylix
+	{
+	  wayland.windowManager.hyprland.enable = true;
+	}
       ];
     };
   };

@@ -1,8 +1,21 @@
 {
   wayland.windowManager.hyprland.settings = {
     bind = [
-      "$mainMod, Return, exec, $term"
+      #GENERAL
       "$mainMod, Q, killactive"
+
+      #APPS
+      "$mainMod, Return, exec, $term"
+      "$mainMod, B, exec, $browser"
+
+      #DMENU
+      "$mainMod, A, exec, pkill wofi || wofi --show drun"
+      "$mainMod, W, exec, pkill networkmanager_dmenu || networkmanager_dmenu"
+
+      #WAYBAR
+      "$mainMod, N, exec, swaync-client -t -sw"
+
+      #WINDOW MANAGEMENT
       "$mainMod CTRL, H, resizeactive,-50 0"
       "$mainMod CTRL, L, resizeactive,50 0"
       "$mainMod CTRL, K, resizeactive,0 -50"
@@ -39,8 +52,10 @@
       "$mainMod SHIFT, code:17, movetoworkspace, 8"
       "$mainMod SHIFT, code:18, movetoworkspace, 9"
       "$mainMod SHIFT, code:19, movetoworkspace, 10"
-      "$mainMod SHIFT, bracketleft, movetoworkspace, -1 # brackets [ or ]"
+      "$mainMod SHIFT, bracketleft, movetoworkspace, -1"
       "$mainMod SHIFT, bracketright, movetoworkspace, +1"
+
+      # "$mainMod, G, hy3:makegroup"
     ];
   };
 }

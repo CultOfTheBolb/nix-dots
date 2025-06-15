@@ -4,9 +4,9 @@
   home.packages = [
     (pkgs.writeShellScriptBin "nv" ''
       if [[ -f "project.godot" ]]; then
-          nvim -n --listen /tmp/godot.pipe
+          ${pkgs.neovim}/bin/nvim -n --listen /tmp/godot.pipe
       else
-          nvim -n
+          ${pkgs.neovim}/bin/nvim -n
       fi
     '')
   ];

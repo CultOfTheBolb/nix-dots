@@ -7,7 +7,10 @@
     ./services
   ];
 
-  environment.systemPackages = [ pkgs.home-manager ];
+  environment.systemPackages = [
+    pkgs.home-manager
+    pkgs.libsForQt5.qt5.qtgraphicaleffects
+  ];
 
   networking.hostName = user;
 

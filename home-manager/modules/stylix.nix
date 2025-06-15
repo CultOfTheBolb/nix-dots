@@ -6,13 +6,18 @@
 
     base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyodark.yaml";
 
-    image = ./wallpaper.png;
+    cursor = {
+      package = pkgs.graphite-cursors;
+      name = "graphite-dark-nord";
+      size = 16;
+    };
 
-    # cursor = {
-    #   package = pkgs.material-cursors;
-    #   name = "material_dark_cursors";
-    # };
-	#
+    iconTheme = {
+      enable = true;
+      package = pkgs.oranchelo-icon-theme;
+      dark = "Oranchelo-Beka";
+    };
+
     fonts = {
       monospace = {
         package = pkgs.nerd-fonts.jetbrains-mono;
