@@ -1,10 +1,12 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   stylix = {
     enable = true;
 
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyodark.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-dark.yaml";
+
+    override = {
+      base0D = "7aa2f7";
+    };
 
     cursor = {
       package = pkgs.graphite-cursors;
@@ -35,6 +37,7 @@
 
     targets = {
       qt.enable = true;
+      nvf.enable = false;
     };
   };
 }

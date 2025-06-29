@@ -1,0 +1,57 @@
+{
+  programs.nvf.settings.vim.mini = {
+    animate = {
+      enable = true;
+
+      setupOpts = {
+        cursor = {
+          enable = false;
+        };
+      };
+    };
+
+    comment = {
+      enable = true;
+    };
+
+    move = {
+      enable = true;
+    };
+
+    pairs = {
+      enable = true;
+    };
+
+    surround = {
+      enable = true;
+    };
+
+    jump = {
+      enable = true;
+    };
+
+    cursorword = {
+      enable = true;
+    };
+
+    pick = {
+      enable = true;
+    };
+
+    extra = {
+      enable = true;
+    };
+
+    files = {
+      enable = true;
+    };
+
+    icons = {
+      enable = true;
+    };
+
+    indentscope = {
+      enable = true;
+    };
+  };
+}

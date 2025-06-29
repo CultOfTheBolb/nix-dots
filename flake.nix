@@ -14,41 +14,51 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    hyprland.url = "github:hyprwm/Hyprland";
+    hyprland.url = "github:hyprwm/Hyprland?submodules=1";
 
     hyprland-plugins = {
       url = "github:hyprwm/hyprland-plugins";
       inputs.hyprland.follows = "hyprland";
     };
+
+    hy3 = {
+      url = "github:outfoxxed/hy3";
+      inputs.hyprland.follows = "hyprland";
+    };
+
+    nvf = {
+      url = "github:notashelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, home-manager, ... } @ inputs:
-  let
+  outputs = {
+    nixpkgs,
+    home-manager,
+    ...
+  } @ inputs: let
     system = "x86_64-linux";
     user = "yog-sothoth";
-  in
-  {
+  in {
     nixosConfigurations.${user} = nixpkgs.lib.nixosSystem {
-      specialArgs = { inherit inputs user; };
+      specialArgs = {inherit inputs user;};
 
       modules = [
         ./nixos/configuration.nix
-	./users/${user}/hardware-configuration.nix
-	inputs.stylix.nixosModules.stylix
+        ./users/${user}/hardware-configuration.nix
+        inputs.stylix.nixosModules.stylix
       ];
     };
 
     homeConfigurations.${user} = home-manager.lib.homeManagerConfiguration {
       pkgs = nixpkgs.legacyPackages.${system};
 
-      extraSpecialArgs = { inherit inputs user; };
+      extraSpecialArgs = {inherit inputs user;};
 
       modules = [
         ./home-manager/home.nix
-	inputs.stylix.homeModules.stylix
-	{
-	  wayland.windowManager.hyprland.enable = true;
-	}
+        inputs.stylix.homeModules.stylix
+        inputs.nvf.homeManagerModules.default
       ];
     };
   };

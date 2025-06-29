@@ -7,5 +7,8 @@
     ./variables.nix
     ./startup.nix
     ./plugins.nix
+    ./decorations.nix
+    ./rules.nix
+    ./input.nix
   ];
 }

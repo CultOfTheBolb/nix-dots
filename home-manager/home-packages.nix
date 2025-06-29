@@ -15,10 +15,12 @@
 
     # Apps
     xfce.thunar
-    kdePackages.dolphin
     firefox
 
     # Utils
     networkmanagerapplet
+
+    # Hyprland
+    hyprshot
   ];
 }

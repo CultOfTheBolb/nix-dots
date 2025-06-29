@@ -1,6 +1,6 @@
 {
   # Enable the uinput module
-  boot.kernelModules = [ "uinput" ];
+  boot.kernelModules = ["uinput"];
 
   # Enable uinput
   hardware.uinput.enable = true;
@@ -11,7 +11,7 @@
   '';
 
   # Ensure the uinput group exists
-  users.groups.uinput = { };
+  users.groups.uinput = {};
 
   # Add the Kanata service user to necessary groups
   systemd.services.kanata-internalKeyboard.serviceConfig = {
@@ -26,41 +26,50 @@
     keyboards = {
       internalKeyboard = {
         devices = [
-          "/dev/input/by-path/pci-0000:0b:00.0-usb-0:12:1.2-event-kbd"
-          "/dev/input/by-path/pci-0000:0b:00.0-usb-0:7:1.0-event-kbd"
-          "/dev/input/by-path/pci-0000:0b:00.0-usbv2-0:12:1.2-event-kbd"
-          "/dev/input/by-path/pci-0000:0b:00.0-usbv2-0:7:1.0-event-kbd"
+          # "/dev/input/by-id/usb-Keychron_Keychron_Link-event-if01"
+          # "/dev/input/by-id/usb-Keychron_Keychron_Link-event-mouse"
+          # "/dev/input/by-id/usb-Keychron_Keychron_Link-if01-event-joystick"
+          # "/dev/input/by-id/usb-Keychron_Keychron_Link-if01-joystick"
+          "/dev/input/by-id/usb-Keychron_Keychron_Link-if02-event-kbd"
+          # "/dev/input/by-id/usb-Keychron_Keychron_Link-mouse"
+          #
+          # "/dev/input/by-id/usb-Keychron_Keychron_V6_Max-event-if02"
+          "/dev/input/by-id/usb-Keychron_Keychron_V6_Max-event-kbd"
+          # "/dev/input/by-id/usb-Keychron_Keychron_V6_Max-if02-event-joystick"
+          # "/dev/input/by-id/usb-Keychron_Keychron_V6_Max-if02-event-kbd"
+          # "/dev/input/by-id/usb-Keychron_Keychron_V6_Max-if02-event-mouse"
+          # "/dev/input/by-id/usb-Keychron_Keychron_V6_Max-if02-mouse"
         ];
         extraDefCfg = "process-unmapped-keys yes";
         config = ''
-	  (defsrc
-	    caps a s d f j k l ; n p i o
-	  )
+          (defsrc
+            caps a s d f j k l ; n p i o
+          )
 
-	  (defvar
-	    tap-time 150
-	    hold-time 200
-	  )
+          (defvar
+            tap-time 150
+            hold-time 200
+          )
 
-	  (defalias
-	    esc (tap-hold 1000 2000 esc caps)
-	    a (tap-hold $tap-time $hold-time a lsft)
-	    s (tap-hold $tap-time $hold-time s lalt)
-	    d (multi (tap-hold $tap-time $hold-time d lctl) (layer-while-held mod))
-	    f (tap-hold $tap-time $hold-time f lmet)
-	    j (tap-hold $tap-time $hold-time j lmet)
-	    k (multi (tap-hold $tap-time $hold-time k lctl) (layer-while-held mod))
-	    l (tap-hold $tap-time $hold-time l lalt)
-	    ; (tap-hold $tap-time $hold-time ; lsft)
-	  )
+          (defalias
+            esc (tap-hold 1000 2000 esc caps)
+            a (tap-hold $tap-time $hold-time a lsft)
+            s (tap-hold $tap-time $hold-time s lalt)
+            d (multi (tap-hold $tap-time $hold-time d lctl) (layer-while-held mod))
+            f (tap-hold $tap-time $hold-time f lmet)
+            j (tap-hold $tap-time $hold-time j lmet)
+            k (multi (tap-hold $tap-time $hold-time k lctl) (layer-while-held mod))
+            l (tap-hold $tap-time $hold-time l lalt)
+            ; (tap-hold $tap-time $hold-time ; lsft)
+          )
 
-	  (deflayer default
-	    @esc @a @s @d @f @j @k @l @; n p i o
-	  )
+          (deflayer default
+            @esc @a @s @d @f @j @k @l @; n p i o
+          )
 
-	  (deflayer mod
-	    _ _ _ _ _ _ _ _ _ (unmod down) (unmod up) (unmod left) (unmod right)
-	  )
+          (deflayer mod
+            _ _ _ _ _ _ _ _ _ (unmod down) (unmod up) (unmod left) (unmod right)
+          )
         '';
       };
     };

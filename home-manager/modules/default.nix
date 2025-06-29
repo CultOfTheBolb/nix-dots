@@ -1,6 +1,7 @@
 {
   imports = [
     ./hyprland
+    ./nvf
     ./stylix.nix
     ./env.nix
     ./git.nix
@@ -12,10 +13,9 @@
     ./swww.nix
     ./bat.nix
     ./waybar.nix
-    # ./mako.nix
     ./swaync.nix
-    ./xdg.nix
     ./wofi.nix
     ./btop.nix
+    ./ohMyPosh.nix
   ];
 }
