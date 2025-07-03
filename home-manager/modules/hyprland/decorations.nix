@@ -1,24 +1,23 @@
-
 {
   wayland.windowManager.hyprland.settings = {
     decoration = {
       rounding = "5";
-             
+
       active_opacity = "0.95";
       inactive_opacity = "0.9";
       fullscreen_opacity = "1.0";
-    
+
       dim_inactive = "true";
       dim_strength = "0.1";
       dim_special = "0.8";
-    
+
       shadow = {
         enabled = "true";
 
         range = "2";
         render_power = "1";
       };
-    
+
       blur = {
         enabled = "true";
 
@@ -29,12 +28,12 @@
         special = "true";
       };
     };
-    
+
     animations = {
       enabled = "1";
 
       bezier = [
-	"default, 0.05, 0.9, 0.1, 1.05"
+        "default, 0.05, 0.9, 0.1, 1.05"
         "wind, 0.05, 0.9, 0.1, 1.05"
         "overshot, 0.13, 0.99, 0.29, 1.08"
         "liner, 1, 1, 1, 1"

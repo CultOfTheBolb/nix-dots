@@ -7,8 +7,8 @@
       sensitivity = "0";
       numlock_by_default = "true";
       left_handed = "false";
-      accel_profile= "adaptive";
-      follow_mouse= "true";
+      accel_profile = "adaptive";
+      follow_mouse = "true";
       float_switch_override_focus = "false";
 
       touchpad = {

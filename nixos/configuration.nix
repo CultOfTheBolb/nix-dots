@@ -1,7 +1,8 @@
-
-{ pkgs, user, ... }:
-
 {
+  pkgs,
+  user,
+  ...
+}: {
   imports = [
     ./modules
     ./services

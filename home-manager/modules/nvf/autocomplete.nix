@@ -6,7 +6,7 @@
       friendly-snippets = {
         enable = true;
       };
-      
+
       mappings = {
         close = "<C-e>";
         complete = "<C-space>";

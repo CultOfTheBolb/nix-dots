@@ -1,6 +1,4 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   stylix = {
     enable = true;
 
@@ -9,26 +7,26 @@
     base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-dark.yaml";
 
     image = ./assets/stylixWallpaper.png;
-    
+
     fonts = {
       monospace = {
         package = pkgs.nerd-fonts.jetbrains-mono;
-	name = "JetBrainsMono Nerd Font Mono";
+        name = "JetBrainsMono Nerd Font Mono";
       };
       sansSerif = {
         package = pkgs.dejavu_fonts;
-	name = "DejaVu Sans";
+        name = "DejaVu Sans";
       };
       serif = {
         package = pkgs.dejavu_fonts;
-	name = "Dejavu Serif";
+        name = "Dejavu Serif";
       };
     };
 
     targets = {
       grub = {
         enable = true;
-	useWallpaper = true;
+        useWallpaper = true;
       };
 
       console.enable = true;

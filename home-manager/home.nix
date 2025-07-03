@@ -1,4 +1,4 @@
-{ user, ... }: {
+{user, ...}: {
   imports = [
     ./home-packages.nix
     ./modules

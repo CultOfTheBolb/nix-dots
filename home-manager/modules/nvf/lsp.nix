@@ -41,6 +41,20 @@
       };
     };
 
+    lspconfig = {
+      enable = true;
+
+      sources = {
+        gdscript = ''
+          vim.lsp.enable("gdscript")
+        '';
+
+        gdshader_lsp = ''
+          vim.lsp.enable("gdshader_lsp")
+        '';
+      };
+    };
+
     mappings = {
       codeAction = "<leader>ca";
       format = "<leader>cf";

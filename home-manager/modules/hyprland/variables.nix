@@ -1,6 +1,4 @@
-{ user, ... }:
-
-{
+{user, ...}: {
   wayland.windowManager.hyprland.settings = {
     "$mainMod" = "SUPER";
     "$term" = "kitty";

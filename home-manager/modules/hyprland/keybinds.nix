@@ -1,6 +1,4 @@
-{ user, ... }:
-
-{
+{user, ...}: {
   wayland.windowManager.hyprland.settings = {
     bind = [
       #GENERAL
@@ -31,7 +29,7 @@
       "$mainMod ALT, Return, exec, pypr toggle term"
       "$mainMod ALT, B, exec, pypr toggle blue"
       "$mainMod ALT, K, exec, pypr toggle proc"
-      
+
       "$mainMod ALT, P, exec, hyprpicker -a"
 
       "$mainMod, print, exec, hyprshot -m window -o /home/${user}/Pictures/Screenshots/"
@@ -79,7 +77,7 @@
 
       "$mainMod, tab, workspace, m+1"
       "$mainMod SHIFT, tab, workspace, m-1"
-      
+
       "$mainMod ALT, code:10, movetoworkspace, 1"
       "$mainMod ALT, code:11, movetoworkspace, 2"
       "$mainMod ALT, code:12, movetoworkspace, 3"
@@ -95,36 +93,36 @@
 
       "ALT, tab, cyclenext"
       "ALT, tab, bringactivetotop"
-      
+
       "$mainMod, mouse_down, workspace, e+1"
       "$mainMod, mouse_up, workspace, e-1"
       "$mainMod, period, workspace, e+1"
       "$mainMod, comma, workspace, e-1"
- 
+
       "$mainMod, G, hy3:makegroup"
     ];
 
     bindm = [
-     #WINDOW MANAGEMENT
-     "$mainMod, mouse:272, movewindow"
-     "$mainMod, mouse:273, resizewindow"
+      #WINDOW MANAGEMENT
+      "$mainMod, mouse:272, movewindow"
+      "$mainMod, mouse:273, resizewindow"
     ];
 
     bindl = [
-     #HOTKEYS
-     ", xf86audioraisevolume, exec, $scriptsDir/Volume.sh --inc"
-     ", xf86audiolowervolume, exec, $scriptsDir/Volume.sh --dec"
-     ", xf86AudioMicMute, exec, $scriptsDir/Volume.sh --toggle-mic"
-     ", xf86audiomute, exec, $scriptsDir/Volume.sh --toggle"
-     ", xf86Sleep, exec, systemctl suspend"
+      #HOTKEYS
+      ", xf86audioraisevolume, exec, $scriptsDir/Volume.sh --inc"
+      ", xf86audiolowervolume, exec, $scriptsDir/Volume.sh --dec"
+      ", xf86AudioMicMute, exec, $scriptsDir/Volume.sh --toggle-mic"
+      ", xf86audiomute, exec, $scriptsDir/Volume.sh --toggle"
+      ", xf86Sleep, exec, systemctl suspend"
 
-     #MEDIA CONTROLS
-     ", xf86AudioPlayPause, exec, $scriptsDir/MediaCtrl.sh --pause"
-     ", xf86AudioPause, exec, $scriptsDir/MediaCtrl.sh --pause"
-     ", xf86AudioPlay, exec, $scriptsDir/MediaCtrl.sh --pause"
-     ", xf86AudioNext, exec, $scriptsDir/MediaCtrl.sh --nxt"
-     ", xf86AudioPrev, exec, $scriptsDir/MediaCtrl.sh --prv"
-     ", xf86audiostop, exec, $scriptsDir/MediaCtrl.sh --stop"
+      #MEDIA CONTROLS
+      ", xf86AudioPlayPause, exec, $scriptsDir/MediaCtrl.sh --pause"
+      ", xf86AudioPause, exec, $scriptsDir/MediaCtrl.sh --pause"
+      ", xf86AudioPlay, exec, $scriptsDir/MediaCtrl.sh --pause"
+      ", xf86AudioNext, exec, $scriptsDir/MediaCtrl.sh --nxt"
+      ", xf86AudioPrev, exec, $scriptsDir/MediaCtrl.sh --prv"
+      ", xf86audiostop, exec, $scriptsDir/MediaCtrl.sh --stop"
     ];
   };
 }

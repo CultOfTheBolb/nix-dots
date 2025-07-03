@@ -11,6 +11,12 @@
       format = {
         type = "alejandra";
       };
+
+      lsp = {
+        enable = true;
+
+        server = "nixd";
+      };
     };
   };
 }

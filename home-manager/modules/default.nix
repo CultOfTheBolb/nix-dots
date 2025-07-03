@@ -17,5 +17,7 @@
     ./wofi.nix
     ./btop.nix
     ./ohMyPosh.nix
+    ./lazygit.nix
+    ./wlogout.nix
   ];
 }

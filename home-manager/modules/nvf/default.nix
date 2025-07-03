@@ -13,5 +13,6 @@
     ./statusline.nix
     ./tabline.nix
     ./dashboard.nix
+    ./terminals.nix
   ];
 }

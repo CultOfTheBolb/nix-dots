@@ -9,7 +9,6 @@
         style = "night";
       };
 
-
       globals = {
         mapleader = " ";
       };

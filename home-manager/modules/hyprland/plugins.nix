@@ -1,6 +1,8 @@
-{ inputs, pkgs, ... }:
-
 {
+  inputs,
+  pkgs,
+  ...
+}: {
   wayland.windowManager.hyprland = {
     plugins = [
       inputs.hy3.packages.x86_64-linux.hy3
@@ -13,7 +15,7 @@
         # 1 - hide gaps with a single window onscreen
         # 2 - 1 but also show the window border
         no_gaps_when_only = "0"; # default: 0
-        
+
         # policy controlling what happens when a node is removed from a group,
         # leaving only a group
         # 0 = remove the nested group
@@ -83,4 +85,3 @@
     };
   };
 }
-

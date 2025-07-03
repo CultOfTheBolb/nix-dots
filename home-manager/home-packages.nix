@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
@@ -6,14 +6,15 @@
     neovim
     yazi
     fastfetch
-    lazygit
 
     # Command line utils
     git
     nix-output-monitor
     libnotify
+    gdtoolkit_4
 
     # Apps
+    godot
     xfce.thunar
     firefox
 

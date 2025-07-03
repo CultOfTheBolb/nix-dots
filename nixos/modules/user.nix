@@ -1,4 +1,8 @@
-{ pkgs, user, ... }: {
+{
+  pkgs,
+  user,
+  ...
+}: {
   programs.zsh.enable = true;
 
   users = {
@@ -6,7 +10,7 @@
     users.yog-sothoth = {
       isNormalUser = true;
       description = "yog-sothoth";
-      extraGroups = [ "networkmanager" "wheel" "storage" ];
+      extraGroups = ["networkmanager" "wheel" "storage"];
     };
   };
 

@@ -1,6 +1,8 @@
-{ pkgs, user, ... }:
-
 {
+  pkgs,
+  user,
+  ...
+}: {
   home.packages = [
     (pkgs.writeShellScriptBin "osu" ''
       cd /home/${user}/.nix &&
