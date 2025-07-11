@@ -2,6 +2,32 @@
   programs.nvf.settings.vim = {
     keymaps = [
       {
+        key = "y";
+        mode = "n";
+        action = "\"+y";
+      }
+      {
+        key = "y";
+        mode = "v";
+        action = "\"+y";
+      }
+      {
+        key = "p";
+        mode = "n";
+        action = "\"+p";
+      }
+      {
+        key = "p";
+        mode = "v";
+        action = "\"+p";
+      }
+      {
+        key = "x";
+        mode = "n";
+        action = "\"+x";
+      }
+
+      {
         key = "<c-h>";
         mode = "n";
         action = ":wincmd h<cr>";

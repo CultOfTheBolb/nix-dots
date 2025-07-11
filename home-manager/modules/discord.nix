@@ -1,5 +1,5 @@
 {
-  programs.waybar = {
+  programs.nixcord = {
     enable = true;
   };
 }

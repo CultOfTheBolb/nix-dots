@@ -3,7 +3,6 @@
     ./stylix.nix
     ./audio.nix
     ./bluetooth.nix
-    ./kernel.nix
     ./networking.nix
     ./nix.nix
     ./boot.nix
@@ -14,5 +13,6 @@
     ./hyprland.nix
     ./update.nix
     ./greetd.nix
+    ./sudo.nix
   ];
 }

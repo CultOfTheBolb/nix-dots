@@ -30,6 +30,21 @@
       url = "github:notashelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nixcord = {
+      url = "github:kaylorben/nixcord";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    firefox-addons = {
+      url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -38,14 +53,17 @@
     ...
   } @ inputs: let
     system = "x86_64-linux";
-    user = "yog-sothoth";
+    user = "thomas";
+
+    hosts = ["yog-sothoth"];
+    host = builtins.elemAt hosts 0;
   in {
-    nixosConfigurations.${user} = nixpkgs.lib.nixosSystem {
-      specialArgs = {inherit inputs user;};
+    nixosConfigurations.${host} = nixpkgs.lib.nixosSystem {
+      specialArgs = {inherit inputs user host;};
 
       modules = [
         ./nixos/configuration.nix
-        ./users/${user}/hardware-configuration.nix
+        ./users/${host}/hardware-configuration.nix
         inputs.stylix.nixosModules.stylix
       ];
     };
@@ -53,12 +71,14 @@
     homeConfigurations.${user} = home-manager.lib.homeManagerConfiguration {
       pkgs = nixpkgs.legacyPackages.${system};
 
-      extraSpecialArgs = {inherit inputs user;};
+      extraSpecialArgs = {inherit inputs user system;};
 
       modules = [
         ./home-manager/home.nix
         inputs.stylix.homeModules.stylix
         inputs.nvf.homeManagerModules.default
+        inputs.nixcord.homeModules.nixcord
+        inputs.spicetify-nix.homeManagerModules.default
       ];
     };
   };

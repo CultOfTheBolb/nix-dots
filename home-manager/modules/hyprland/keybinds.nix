@@ -1,15 +1,19 @@
-{user, ...}: {
+{
+  pkgs,
+  user,
+  ...
+}: {
   wayland.windowManager.hyprland.settings = {
     bind = [
       #GENERAL
       "$mainMod, Q, killactive"
-      "$mainMod ALT, Q, exec, $scriptsDir/KillActiveProcess.sh"
+      "$mainMod ALT, Q, exec, kill $(hyprctl activewindow | grep -o 'pid: [0-9]*' | cut -d' ' -f2)"
 
       "$mainMod, F, fullscreen"
       "$mainMod SHIFT, F, togglefloating"
       "$mainMod ALT, F, exec, hyprctl dispatch workspaceopt allfloat"
 
-      "$mainMod ALT, G, exec, $scriptsDir/GameMode.sh"
+      "$mainMod ALT, G, exec, gameMode"
 
       #APPS
       "$mainMod, Return, exec, $term"
@@ -18,8 +22,7 @@
 
       #DMENU
       "$mainMod, A, exec, pkill wofi || wofi --show drun"
-      "$mainMod, W, exec, pkill networkmanager_dmenu || networkmanager_dmenu"
-      "$mainMod, W, exec, pkill wofi || $scriptsDir/WifiMenu.sh"
+      "$mainMod, W, exec, pkill wofi || ${pkgs.networkmanager_dmenu}/bin/networkmanager_dmenu"
 
       #SERVICES
       "$mainMod, N, exec, swaync-client -t -sw"
@@ -75,9 +78,6 @@
       "$mainMod SHIFT, bracketleft, movetoworkspace, -1"
       "$mainMod SHIFT, bracketright, movetoworkspace, +1"
 
-      "$mainMod, tab, workspace, m+1"
-      "$mainMod SHIFT, tab, workspace, m-1"
-
       "$mainMod ALT, code:10, movetoworkspace, 1"
       "$mainMod ALT, code:11, movetoworkspace, 2"
       "$mainMod ALT, code:12, movetoworkspace, 3"
@@ -110,19 +110,19 @@
 
     bindl = [
       #HOTKEYS
-      ", xf86audioraisevolume, exec, $scriptsDir/Volume.sh --inc"
-      ", xf86audiolowervolume, exec, $scriptsDir/Volume.sh --dec"
-      ", xf86AudioMicMute, exec, $scriptsDir/Volume.sh --toggle-mic"
-      ", xf86audiomute, exec, $scriptsDir/Volume.sh --toggle"
-      ", xf86Sleep, exec, systemctl suspend"
+      ", xf86audioraisevolume, exec, pactl -- set-sink-volume 0 +5%"
+      ", xf86audiolowervolume, exec, pactl -- set-sink-volume 0 -5%"
+      ", xf86AudioMicMute, exec, pactl -- set-source-mute 0 toggle"
+      ", xf86audiomute, exec, pactl -- set-sink-mute 0 toggle"
 
-      #MEDIA CONTROLS
-      ", xf86AudioPlayPause, exec, $scriptsDir/MediaCtrl.sh --pause"
-      ", xf86AudioPause, exec, $scriptsDir/MediaCtrl.sh --pause"
-      ", xf86AudioPlay, exec, $scriptsDir/MediaCtrl.sh --pause"
-      ", xf86AudioNext, exec, $scriptsDir/MediaCtrl.sh --nxt"
-      ", xf86AudioPrev, exec, $scriptsDir/MediaCtrl.sh --prv"
-      ", xf86audiostop, exec, $scriptsDir/MediaCtrl.sh --stop"
+      ", xf86AudioPlayPause, exec, mediaControl --pause"
+      ", xf86AudioPause, exec, mediaControl --pause"
+      ", xf86AudioPlay, exec, mediaControl --pause"
+      ", xf86AudioNext, exec, mediaControl --nxt"
+      ", xf86AudioPrev, exec, mediaControl --prv"
+      ", xf86audiostop, exec, mediaControl --stop"
+
+      ", xf86Sleep, exec, systemctl suspend"
     ];
   };
 }

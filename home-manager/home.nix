@@ -3,6 +3,7 @@
     ./home-packages.nix
     ./modules
     ./scripts
+    ./colors
   ];
 
   home = {

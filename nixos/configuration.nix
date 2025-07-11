@@ -1,6 +1,6 @@
 {
   pkgs,
-  user,
+  host,
   ...
 }: {
   imports = [
@@ -13,7 +13,7 @@
     pkgs.libsForQt5.qt5.qtgraphicaleffects
   ];
 
-  networking.hostName = user;
+  networking.hostName = host;
 
   system.stateVersion = "24.11";
 }

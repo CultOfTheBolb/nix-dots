@@ -10,5 +10,6 @@
     ./decorations.nix
     ./rules.nix
     ./input.nix
+    ./hyprlock.nix
   ];
 }

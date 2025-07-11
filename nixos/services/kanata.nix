@@ -26,19 +26,8 @@
     keyboards = {
       internalKeyboard = {
         devices = [
-          # "/dev/input/by-id/usb-Keychron_Keychron_Link-event-if01"
-          # "/dev/input/by-id/usb-Keychron_Keychron_Link-event-mouse"
-          # "/dev/input/by-id/usb-Keychron_Keychron_Link-if01-event-joystick"
-          # "/dev/input/by-id/usb-Keychron_Keychron_Link-if01-joystick"
           "/dev/input/by-id/usb-Keychron_Keychron_Link-if02-event-kbd"
-          # "/dev/input/by-id/usb-Keychron_Keychron_Link-mouse"
-          #
-          # "/dev/input/by-id/usb-Keychron_Keychron_V6_Max-event-if02"
           "/dev/input/by-id/usb-Keychron_Keychron_V6_Max-event-kbd"
-          # "/dev/input/by-id/usb-Keychron_Keychron_V6_Max-if02-event-joystick"
-          # "/dev/input/by-id/usb-Keychron_Keychron_V6_Max-if02-event-kbd"
-          # "/dev/input/by-id/usb-Keychron_Keychron_V6_Max-if02-event-mouse"
-          # "/dev/input/by-id/usb-Keychron_Keychron_V6_Max-if02-mouse"
         ];
         extraDefCfg = "process-unmapped-keys yes";
         config = ''

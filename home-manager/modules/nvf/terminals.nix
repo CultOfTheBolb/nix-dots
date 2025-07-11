@@ -14,7 +14,7 @@
       };
 
       mappings = {
-        open = "<c-t>";
+        open = "<C-t>";
       };
     };
   };

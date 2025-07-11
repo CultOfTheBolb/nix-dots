@@ -30,6 +30,8 @@
       fzfo = "nvim $(fzf -m --preview 'bat --style numbers,changes --color=always {}')";
 
       pj = "yazi $(${fd}/bin/fd --type=d --hidden --glob '.git' /home/${user}/Projects/ | sed 's|/\.git||' | fzf --preview '${eza}/bin/eza --tree --color=always {}')";
+
+      x = "exit";
     };
 
     oh-my-zsh = {

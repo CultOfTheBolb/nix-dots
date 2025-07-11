@@ -12,12 +12,15 @@
     ./nh.nix
     ./swww.nix
     ./bat.nix
-    ./waybar.nix
+    ./waybar
     ./swaync.nix
     ./wofi.nix
     ./btop.nix
     ./ohMyPosh.nix
     ./lazygit.nix
     ./wlogout.nix
+    ./spotify.nix
+    ./discord.nix
+    ./browser.nix
   ];
 }

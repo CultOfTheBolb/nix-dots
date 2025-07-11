@@ -1,8 +1,14 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  user,
+  ...
+}: {
   stylix = {
     enable = true;
 
     base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-dark.yaml";
+
+    image = ./assets/stylixWallpaper.png;
 
     override = {
       base0D = "7aa2f7";
@@ -38,6 +44,13 @@
     targets = {
       qt.enable = true;
       nvf.enable = false;
+      wofi.enable = false;
+      hyprlock.enable = false;
+      waybar.enable = false;
+
+      firefox = {
+        profileNames = [user];
+      };
     };
   };
 }

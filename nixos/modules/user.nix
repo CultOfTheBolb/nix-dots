@@ -1,18 +1,12 @@
-{
-  pkgs,
-  user,
-  ...
-}: {
+{pkgs, ...}: {
   programs.zsh.enable = true;
 
   users = {
     defaultUserShell = pkgs.zsh;
-    users.yog-sothoth = {
+    users.thomas = {
       isNormalUser = true;
-      description = "yog-sothoth";
+      description = "I am Thomas!";
       extraGroups = ["networkmanager" "wheel" "storage"];
     };
   };
-
-  services.getty.autologinUser = user;
 }

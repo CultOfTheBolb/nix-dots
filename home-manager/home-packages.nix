@@ -12,11 +12,12 @@
     nix-output-monitor
     libnotify
     gdtoolkit_4
+    wl-clipboard
+    pulseaudio
 
     # Apps
     godot
     xfce.thunar
-    firefox
 
     # Utils
     networkmanagerapplet
