@@ -33,10 +33,10 @@
       "$mainMod ALT, B, exec, pypr toggle blue"
       "$mainMod ALT, K, exec, pypr toggle proc"
 
-      "$mainMod ALT, P, exec, hyprpicker -a"
+      "$mainMod ALT, P, exec, ${pkgs.hyprpicker}/bin/hyprpicker -a"
 
-      "$mainMod, print, exec, hyprshot -m window -o /home/${user}/Pictures/Screenshots/"
-      "$mainMod ALT, print, exec, hyprshot -m region -o /home/${user}/Pictures/Screenshots/"
+      "$mainMod, S, exec, ${pkgs.hyprshot}/bin/hyprshot -m window -o /home/${user}/Pictures/Screenshots/"
+      "$mainMod ALT, S, exec, ${pkgs.hyprshot}/bin/hyprshot -m region -o /home/${user}/Pictures/Screenshots/"
 
       #WINDOW MANAGEMENT
       "$mainMod CTRL, H, resizeactive,-50 0"
@@ -44,15 +44,15 @@
       "$mainMod CTRL, K, resizeactive,0 -50"
       "$mainMod CTRL, J, resizeactive,0 50"
 
-      "$mainMod ALT, H, hy3:movewindow, l"
-      "$mainMod ALT, L, hy3:movewindow, r"
-      "$mainMod ALT, K, hy3:movewindow, u"
-      "$mainMod ALT, J, hy3:movewindow, d"
+      "$mainMod ALT, H, movewindow, l"
+      "$mainMod ALT, L, movewindow, r"
+      "$mainMod ALT, K, movewindow, u"
+      "$mainMod ALT, J, movewindow, d"
 
-      "$mainMod, H, hy3:movefocus, l"
-      "$mainMod, L, hy3:movefocus, r"
-      "$mainMod, K, hy3:movefocus, u"
-      "$mainMod, J, hy3:movefocus, d"
+      "$mainMod, H, movefocus, l"
+      "$mainMod, L, movefocus, r"
+      "$mainMod, K, movefocus, u"
+      "$mainMod, J, movefocus, d"
 
       "$mainMod, code:10, workspace, 1"
       "$mainMod, code:11, workspace, 2"
@@ -98,8 +98,6 @@
       "$mainMod, mouse_up, workspace, e-1"
       "$mainMod, period, workspace, e+1"
       "$mainMod, comma, workspace, e-1"
-
-      "$mainMod, G, hy3:makegroup"
     ];
 
     bindm = [
@@ -112,15 +110,11 @@
       #HOTKEYS
       ", xf86audioraisevolume, exec, pactl -- set-sink-volume 0 +5%"
       ", xf86audiolowervolume, exec, pactl -- set-sink-volume 0 -5%"
-      ", xf86AudioMicMute, exec, pactl -- set-source-mute 0 toggle"
+      ", print, exec, pactl -- set-source-mute 0 toggle"
       ", xf86audiomute, exec, pactl -- set-sink-mute 0 toggle"
 
-      ", xf86AudioPlayPause, exec, mediaControl --pause"
-      ", xf86AudioPause, exec, mediaControl --pause"
-      ", xf86AudioPlay, exec, mediaControl --pause"
-      ", xf86AudioNext, exec, mediaControl --nxt"
-      ", xf86AudioPrev, exec, mediaControl --prv"
-      ", xf86audiostop, exec, mediaControl --stop"
+      "$mainMod, C, exec, mediaControl --pause"
+      ", insert, exec, mediaControl --nxt"
 
       ", xf86Sleep, exec, systemctl suspend"
     ];

@@ -21,11 +21,6 @@
       inputs.hyprland.follows = "hyprland";
     };
 
-    hy3 = {
-      url = "github:outfoxxed/hy3";
-      inputs.hyprland.follows = "hyprland";
-    };
-
     nvf = {
       url = "github:notashelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -63,7 +58,7 @@
 
       modules = [
         ./nixos/configuration.nix
-        ./users/${host}/hardware-configuration.nix
+        ./hosts/${host}/hardware-configuration.nix
         inputs.stylix.nixosModules.stylix
       ];
     };

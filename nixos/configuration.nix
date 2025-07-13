@@ -15,5 +15,15 @@
 
   networking.hostName = host;
 
-  system.stateVersion = "24.11";
+  system = {
+    stateVersion = "24.11";
+
+    nixos = {
+      label = "Main";
+    };
+  };
+
+  nixpkgs.config = {
+    allowUnfree = true;
+  };
 }

@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
   programs.nvf.settings.vim.languages = {
     enableTreesitter = true;
     enableDAP = true;
@@ -16,6 +16,39 @@
         enable = true;
 
         server = "nixd";
+      };
+    };
+
+    csharp = {
+      enable = true;
+
+      lsp = {
+        enable = true;
+
+        server = "omnisharp";
+        package = pkgs.omnisharp-roslyn;
+      };
+    };
+
+    markdown = {
+      enable = true;
+
+      extensions = {
+        markview-nvim = {
+          enable = true;
+        };
+      };
+
+      format = {
+        enable = true;
+
+        type = "prettierd";
+      };
+
+      lsp = {
+        enable = true;
+
+        server = "marksman";
       };
     };
   };

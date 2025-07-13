@@ -22,5 +22,6 @@
     ./spotify.nix
     ./discord.nix
     ./browser.nix
+    ./godot.nix
   ];
 }

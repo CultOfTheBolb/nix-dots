@@ -24,6 +24,18 @@
         mouse = "";
       };
 
+      autocmds = [
+        {
+          enable = true;
+
+          desc = "Change tab width to 4 in c# file.";
+
+          command = "setlocal tabstop=4 shiftwidth=4";
+          event = ["FileType"];
+          pattern = ["cs"];
+        }
+      ];
+
       clipboard = {
         registers = "unnamedplus";
 

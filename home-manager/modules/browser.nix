@@ -50,11 +50,7 @@
         };
 
         search = {
-          default = "startpage";
-
-          engines = {};
-
-          privateDefault = "startpage";
+          force = true;
         };
 
         settings = {

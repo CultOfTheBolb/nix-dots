@@ -13,16 +13,15 @@
     libnotify
     gdtoolkit_4
     wl-clipboard
-    pulseaudio
+    dotnet-sdk
 
     # Apps
-    godot
+    godot-mono
     xfce.thunar
 
     # Utils
     networkmanagerapplet
-
-    # Hyprland
-    hyprshot
+    pulseaudio
+    omnisharp-roslyn
   ];
 }

@@ -10,7 +10,7 @@
 
         resize_on_border = "true";
 
-        layout = "hy3";
+        layout = "master";
       };
 
       gestures = {

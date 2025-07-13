@@ -41,5 +41,9 @@
 
       "keepaspectratio, title:^(Picture-in-Picture)$"
     ];
+
+    layerrule = [
+      "noanim, selection"
+    ];
   };
 }

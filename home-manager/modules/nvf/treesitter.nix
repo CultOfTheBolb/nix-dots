@@ -22,6 +22,8 @@
 
     indent = {
       enable = true;
+
+      disable = ["csharp"];
     };
 
     textobjects = {
