@@ -51,5 +51,15 @@
         server = "marksman";
       };
     };
+
+    python = {
+      enable = true;
+
+      lsp = {
+        enable = true;
+
+        server = "pyright";
+      };
+    };
   };
 }

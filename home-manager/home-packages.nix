@@ -11,17 +11,15 @@
     git
     nix-output-monitor
     libnotify
-    gdtoolkit_4
     wl-clipboard
-    dotnet-sdk
 
     # Apps
     godot-mono
     xfce.thunar
+    vlc
 
     # Utils
     networkmanagerapplet
     pulseaudio
-    omnisharp-roslyn
   ];
 }

@@ -10,7 +10,11 @@
 
         resize_on_border = "true";
 
-        layout = "master";
+        layout = "dwindle";
+      };
+
+      dwindle = {
+        preserve_split = true;
       };
 
       gestures = {

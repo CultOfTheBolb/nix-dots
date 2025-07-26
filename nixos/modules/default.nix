@@ -14,5 +14,6 @@
     ./update.nix
     ./greetd.nix
     ./sudo.nix
+    ./nixld.nix
   ];
 }

@@ -54,13 +54,24 @@
         };
 
         settings = {
-          "browser.startup.homepage" = "https://nixos.org";
           "browser.startup.page" = 3;
           "browser.startup.couldRestoreSession.count" = 2;
           "browser.ctrlTab.sortByRecentlyUsed" = true;
           "browser.ml.chat.enabled" = false;
+          "browser.tabs.allow_transparent_browser" = false;
+
+          "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+          "svg.context-properties.content.enabled" = true;
+
+          "widget.transparent-windows" = true;
+          "widget.windows.mica" = true;
+          "widget.windows.mica.extra" = true;
+          "widget.windows.mica.popups" = 2;
+          "widget.windows.mica.toplevel-backdrop" = 2;
+          "widget.macos.titlebar-blend-mode.behind-window" = true;
 
           "sidebar.verticalTabs" = true;
+          "sidebar.animation.enabled" = false;
           "sidebar.main.tools" = ["history" "bookmarks"];
 
           "browser.newtabpage.pinned" = [

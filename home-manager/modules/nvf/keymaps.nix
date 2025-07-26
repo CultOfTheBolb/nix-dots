@@ -26,6 +26,22 @@
         mode = "n";
         action = "\"+x";
       }
+      {
+        key = "x";
+        mode = "v";
+        action = "\"+x";
+      }
+
+      {
+        key = "<leader>sv";
+        mode = "n";
+        action = ":vsplit<cr>";
+      }
+      {
+        key = "<leader>sh";
+        mode = "n";
+        action = ":split<cr>";
+      }
 
       {
         key = "<c-h>";

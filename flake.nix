@@ -48,7 +48,7 @@
     ...
   } @ inputs: let
     system = "x86_64-linux";
-    user = "thomas";
+    user = "blob";
 
     hosts = ["yog-sothoth"];
     host = builtins.elemAt hosts 0;

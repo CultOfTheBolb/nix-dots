@@ -3,9 +3,9 @@
 
   users = {
     defaultUserShell = pkgs.zsh;
-    users.thomas = {
+    users.blob = {
       isNormalUser = true;
-      description = "I am Thomas!";
+      description = "Cult Of The Blob";
       extraGroups = ["networkmanager" "wheel" "storage"];
     };
   };

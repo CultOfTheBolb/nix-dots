@@ -1,8 +1,11 @@
 {user, ...}: {
-  home.file."/home/${user}/.config/godot/editor_settings-4.4.tres" = {
+  home.file.godot = {
     enable = true;
 
+    target = "/home/${user}/.config/godot/editor_settings-4.4.tres";
+
     recursive = true;
+    force = true;
 
     text = ''
       [gd_resource type="EditorSettings" load_steps=3 format=3]

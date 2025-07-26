@@ -31,11 +31,36 @@
 
         {
           lhs = "<leader>c";
+          group = "+Code Actions";
           icon = "";
         }
+
         {
-          lhs = "<leader>cv";
-          icon = "";
+          lhs = "<leader>s";
+          group = "+Split";
+          icon = "󰃻";
+        }
+        {
+          lhs = "<leader>sv";
+          group = "+Split";
+          icon = "";
+        }
+        {
+          lhs = "<leader>sh";
+          group = "+Split";
+          icon = "";
+        }
+
+        {
+          lhs = "<leader>g";
+          group = "+Git";
+          icon = "";
+        }
+
+        {
+          lhs = "<leader>d";
+          group = "+Debug";
+          icon = "";
         }
 
         {

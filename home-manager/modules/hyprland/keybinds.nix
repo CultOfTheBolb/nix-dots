@@ -94,6 +94,8 @@
       "ALT, tab, cyclenext"
       "ALT, tab, bringactivetotop"
 
+      "$mainMod, V, togglesplit"
+
       "$mainMod, mouse_down, workspace, e+1"
       "$mainMod, mouse_up, workspace, e-1"
       "$mainMod, period, workspace, e+1"
