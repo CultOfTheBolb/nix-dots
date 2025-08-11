@@ -23,5 +23,9 @@
     ./discord.nix
     ./browser.nix
     ./godot.nix
+    ./mangohud.nix
+    ./lutris.nix
+    ./desktopEntries.nix
+    ./fd.nix
   ];
 }

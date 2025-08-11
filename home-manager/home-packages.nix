@@ -15,8 +15,13 @@
 
     # Apps
     godot-mono
+    blender
     xfce.thunar
     vlc
+    prismlauncher
+    file-roller
+    krita
+    gimp
 
     # Utils
     networkmanagerapplet

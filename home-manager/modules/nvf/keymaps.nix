@@ -2,6 +2,12 @@
   programs.nvf.settings.vim = {
     keymaps = [
       {
+        key = "gb";
+        mode = "n";
+        action = "o/**/<Esc>hi<Enter><Enter><Esc>ka<Space>";
+      }
+
+      {
         key = "y";
         mode = "n";
         action = "\"+y";

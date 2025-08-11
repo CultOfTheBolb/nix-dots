@@ -3,7 +3,7 @@
     git = {
       enable = true;
 
-      userName = "Gamemaster-git";
+      userName = "CultOfTheBlob";
       userEmail = "human.choupani@gmail.com";
 
       extraConfig = {

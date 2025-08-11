@@ -10,6 +10,7 @@
 
   environment.systemPackages = [
     pkgs.home-manager
+
     pkgs.libsForQt5.qt5.qtgraphicaleffects
   ];
 

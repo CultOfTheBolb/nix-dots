@@ -116,7 +116,6 @@
       ", xf86audiomute, exec, pactl -- set-sink-mute 0 toggle"
 
       "$mainMod, C, exec, mediaControl --pause"
-      ", insert, exec, mediaControl --nxt"
 
       ", xf86Sleep, exec, systemctl suspend"
     ];

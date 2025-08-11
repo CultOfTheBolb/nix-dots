@@ -8,6 +8,12 @@
 
     image = ./assets/stylixWallpaper.png;
 
+    cursor = {
+      package = pkgs.graphite-cursors;
+      name = "graphite-dark-nord";
+      size = 16;
+    };
+
     fonts = {
       monospace = {
         package = pkgs.nerd-fonts.jetbrains-mono;

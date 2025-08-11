@@ -7,8 +7,9 @@
         options = {
           always_show_bufferline = false;
           auto_toggle_bufferline = true;
-          diagnositcs = "nvim_lsp";
           enforce_regular_tabs = true;
+          diagnositcs = "nvim_lsp";
+          sort_by = "insert_at_end";
         };
       };
 

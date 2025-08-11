@@ -12,6 +12,10 @@
 
     comment = {
       enable = true;
+
+      setupOpts = {
+        ignore_blank_line = true;
+      };
     };
 
     move = {

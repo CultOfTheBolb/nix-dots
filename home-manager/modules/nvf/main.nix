@@ -34,6 +34,16 @@
           event = ["FileType"];
           pattern = ["cs"];
         }
+
+        {
+          enable = true;
+
+          desc = "Setup comments for gdshader.";
+
+          command = "set commentstring=//%s";
+          event = ["FileType"];
+          pattern = ["gdshader"];
+        }
       ];
 
       clipboard = {

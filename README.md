@@ -50,4 +50,4 @@ systemctl reboot
 
 ---
 
-Now you can use `os` in your terminal your config or `osu` to update it.
+Now you can use `os` in your terminal to rebuild your config or `osu` to update it.

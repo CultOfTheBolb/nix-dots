@@ -12,91 +12,95 @@
       hide_scroll = true;
     };
 
-    style = ''
-      * {
-        font-family: 'JetBrainsMono Nerd Font', monospace;
-        font-size: 18px;
-      }
+    style =
+      /*
+      css
+      */
+      ''
+        * {
+          font-family: 'JetBrainsMono Nerd Font', monospace;
+          font-size: 18px;
+        }
 
-      window {
-        margin: 0px;
-        padding: 10px;
-        border: 2px solid #${config.colors.base0D};
-        border-radius: 8px;
-        background-color: #${config.colors.base00};
-      }
+        window {
+          margin: 0px;
+          padding: 10px;
+          border: 2px solid #${config.colors.base0D};
+          border-radius: 8px;
+          background-color: #${config.colors.base00};
+        }
 
-      #inner-box {
-        margin: 5px;
-        padding: 10px;
-        border: none;
-        background-color: #${config.colors.base00};
-      }
-
-      #outer-box {
-        margin: 5px;
-        padding: 10px;
-        border: none;
-        background-color: #${config.colors.base00};
-      }
-
-      #scroll {
-        margin: 0px;
-        padding: 10px;
-        border: none;
-        background-color: #${config.colors.base00};
-      }
-
-      #input {
-        margin: 5px 20px;
-        padding: 10px;
-        border: none;
-        border-radius: 8px;
-        color: #${config.colors.base05};
-        background-color: #${config.colors.base00};
-      }
-
-      #input image {
+        #inner-box {
+          margin: 5px;
+          padding: 10px;
           border: none;
-          color: #${config.colors.base0F};
-      }
+          background-color: #${config.colors.base00};
+        }
 
-      #input * {
-        outline: 4px solid #${config.colors.base0E}!important;
-      }
+        #outer-box {
+          margin: 5px;
+          padding: 10px;
+          border: none;
+          background-color: #${config.colors.base00};
+        }
 
-      #text {
-        margin: 5px;
-        border: none;
-        color: #${config.colors.base05};
-      }
+        #scroll {
+          margin: 0px;
+          padding: 10px;
+          border: none;
+          background-color: #${config.colors.base00};
+        }
 
-      #entry {
-        background-color: #${config.colors.base00};
-      }
+        #input {
+          margin: 5px 20px;
+          padding: 10px;
+          border: none;
+          border-radius: 8px;
+          color: #${config.colors.base05};
+          background-color: #${config.colors.base00};
+        }
 
-      #entry arrow {
-        border: none;
-        color: #${config.colors.base0D};
-      }
+        #input image {
+            border: none;
+            color: #${config.colors.base0F};
+        }
 
-      #entry:selected {
-        border: 0.11em solid #${config.colors.base0D};
-        border-radius: 8px;
-      }
+        #input * {
+          outline: 4px solid #${config.colors.base0E}!important;
+        }
 
-      #entry:selected #text {
-        color: #${config.colors.base0E};
-      }
+        #text {
+          margin: 5px;
+          border: none;
+          color: #${config.colors.base05};
+        }
 
-      #entry:drop(active) {
-        background-color: #${config.colors.base0D}!important;
-      }
+        #entry {
+          background-color: #${config.colors.base00};
+        }
 
-      image{
-        margin-left: .25em;
-        margin-right: .25em;
-      }
-    '';
+        #entry arrow {
+          border: none;
+          color: #${config.colors.base0D};
+        }
+
+        #entry:selected {
+          border: 0.11em solid #${config.colors.base0D};
+          border-radius: 8px;
+        }
+
+        #entry:selected #text {
+          color: #${config.colors.base0E};
+        }
+
+        #entry:drop(active) {
+          background-color: #${config.colors.base0D}!important;
+        }
+
+        image{
+          margin-left: .25em;
+          margin-right: .25em;
+        }
+      '';
   };
 }

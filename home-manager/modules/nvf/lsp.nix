@@ -48,6 +48,9 @@
         gdscript = ''
           vim.lsp.enable("gdscript")
         '';
+        gdshader = ''
+          vim.lsp.enable("gdshader_lsp")
+        '';
       };
     };
 

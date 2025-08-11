@@ -15,5 +15,8 @@
     ./greetd.nix
     ./sudo.nix
     ./nixld.nix
+    ./hardware.nix
+    ./steam.nix
+    ./gamemode.nix
   ];
 }

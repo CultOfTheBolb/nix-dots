@@ -233,16 +233,12 @@
             "class<celluloid|zoom>" = " ";
             "class<cider>" = "󰎆 ";
             "class<virt-manager>" = " ";
-            "class<codeblocks>" = "󰅩 ";
-            "class<mousepad>" = " ";
+            "title<.*/Projects/.*>" = "󰅩 ";
             "class<libreoffice-writer>" = " ";
             "class<libreoffice-startcenter>" = "󰏆 ";
             "class<com.obsproject.studio>" = " ";
             "class<polkit-gnome-authentication-agent-1>" = "󰒃 ";
-            "class<nwg-look>" = " ";
             "class<zen-alpha>" = "󰰷 ";
-            "class<waterfox|waterfox-bin>" = " ";
-            "class<microsoft-edge>" = " ";
             "class<vlc>" = "󰕼 ";
             "class<blue>" = " ";
             "class<proc>" = " ";

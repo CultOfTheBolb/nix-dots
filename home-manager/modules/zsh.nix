@@ -17,6 +17,8 @@
     shellAliases = with pkgs; {
       ".." = "cd ..";
 
+      lg = "lazygit";
+
       ls = "${eza}/bin/eza -a --icons";
       ll = "${eza}/bin/eza -al --icons";
       la = "${eza}/bin/eza -a --tree --level=2 --icons";
